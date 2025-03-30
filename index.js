@@ -38,7 +38,7 @@ function init() {
         // Har 1 daqiqada bir honey olish
         setInterval(() => {
             withdrawHoney(bot, mcData);
-        }, 60 * 1000);
+        }, 5 * 60 * 1000);
     });
 
     bot.on("messagestr", (message) => {
