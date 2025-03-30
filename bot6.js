@@ -22,7 +22,7 @@ function init() {
 
     bot.on("spawn", () => {
         mcData = require("minecraft-data")(bot.version);
-        console.log("Bot serverga kirdi!");
+
 
         // AFK oldini olish uchun har 3 daqiqada bir sakrash
         setInterval(() => {
