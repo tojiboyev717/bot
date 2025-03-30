@@ -33,16 +33,6 @@ function init() {
         // Serverga kirganda /is warp sell yozish
         bot.chat("/is warp sell");
 
-    bot.on("end", () => {
-        console.log("Bot serverdan chiqib ketdi, qayta ulanmoqda...");
-        setTimeout(createBot, 5000);
-    });
-
-    bot.on("error", (err) => {
-        console.log("Xatolik yuz berdi: ", err);
-        setTimeout(createBot, 5000);
-    });
-
         // Har 1 daqiqada bir honey olish
         setInterval(() => {
             withdrawHoney(bot, mcData);
@@ -88,6 +78,16 @@ function init() {
             const command = message.replace("!1 ", "");
             bot.chat(command);
         }
+    });
+
+    bot.on("end", () => {
+        console.log("Bot serverdan chiqib ketdi. Qayta ulanmoqda...");
+        setTimeout(init, 5000);
+    });
+
+    bot.on("error", (err) => {
+        console.log("Xatolik yuz berdi:", err);
+        setTimeout(init, 5000);
     });
 
 
