@@ -23,6 +23,7 @@ function init() {
     bot.on("spawn", () => {
         mcData = require("minecraft-data")(bot.version);
 
+
         // AFK oldini olish uchun har 3 daqiqada bir sakrash
         setInterval(() => {
             bot.setControlState("jump", true);
@@ -78,6 +79,7 @@ function init() {
             bot.chat(command);
         }
     });
+
 
     // Chestdan honey olish va sotish
 bot.on('windowOpen', async (window) => {
