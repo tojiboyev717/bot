@@ -5,7 +5,7 @@ require('colors').enable();
 
 // Qolgan bot kodi shu yerda davom etadi...
 
-const botUsername = 'FN_01';
+const botUsername = 'FN_06';
 const botPassword = 'fortune321';
 const admin = 'Umid';
 var mcData;
@@ -62,8 +62,8 @@ function init() {
     });
 
     bot.on("whisper", (usernameSender, message) => {
-        if (usernameSender === admin && message.startsWith("1 ")) {
-            const command = message.replace("1 ", "");
+        if (usernameSender === admin && message.startsWith("6 ")) {
+            const command = message.replace("6 ", "");
             bot.chat(command);
         }
     });
