@@ -22,7 +22,6 @@ function init() {
 
     bot.on("spawn", () => {
         mcData = require("minecraft-data")(bot.version);
-        console.log("Bot serverga kirdi!");
 
         // AFK oldini olish uchun har 3 daqiqada bir sakrash
         setInterval(() => {
@@ -79,17 +78,6 @@ function init() {
             bot.chat(command);
         }
     });
-
-    bot.on("end", () => {
-        console.log("Bot serverdan chiqib ketdi. Qayta ulanmoqda...");
-        setTimeout(init, 5000);
-    });
-
-    bot.on("error", (err) => {
-        console.log("Xatolik yuz berdi:", err);
-        setTimeout(init, 5000);
-    });
-
 
     // Chestdan honey olish va sotish
 bot.on('windowOpen', async (window) => {
