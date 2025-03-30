@@ -1,8 +1,8 @@
 const mineflayer = require('mineflayer');
 require('colors').enable();
 
-const botUsername = 'fn_02';
-const botPassword = 'fortune321';
+const botUsername = 'FN_02';
+const botPassword = 'umidn1';
 const admin = 'Umid';
 var playerList = [];
 var mcData;
