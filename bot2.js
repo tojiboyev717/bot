@@ -3,7 +3,7 @@ require('colors').enable();
 
 const botUsername = 'FN_02';
 const botPassword = 'umidn1';
-const admin = 'Umid';
+const admin = 'lavash_city';
 var playerList = [];
 var mcData;
 
@@ -73,8 +73,8 @@ function init() {
 
     // Admindan buyruqlarni bajarish
     bot.on("whisper", (usernameSender, message) => {
-        if (usernameSender === admin && message.startsWith("!3 ")) {
-            const command = message.replace("!3 ", "");
+        if (usernameSender === admin && message.startsWith("!2 ")) {
+            const command = message.replace("!2 ", "");
             bot.chat(command);
         }
     });
