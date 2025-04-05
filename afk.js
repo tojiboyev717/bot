@@ -46,20 +46,8 @@ function init() {
         if (message.includes("login")) {
             bot.chat(`/login ${botPassword}`);
         }
-		if (message.includes("Вы успешно вошли в аккаунт")) {
-            bot.chat(`/is warp sell`);
-        }
-
-        // Hisobdagi pullarni avtomatik yuborish
-        if (message.includes("Balance: $")) {
-            let balanceStr = message.match(/Balance: \$([\d,]+)/);
-            if (!balanceStr || balanceStr.length < 2) return;
-
-            let balance = parseInt(balanceStr[1].replace(/,/g, ""));
-
-            if (balance > 0) {
-                bot.chat(`/pay ${admin} ${balance}`);
-            }
+	if (message.includes("Вы успешно вошли в аккаунт")) {
+            bot.chat(`/is warp afk`);
         }
     });
 
